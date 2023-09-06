@@ -1,4 +1,4 @@
-import ExpenseItem from "./components/ExpenseItem/ExpenseItem";
+import Expenses from "./components/Expenses/Expenses";
 
 export default function App() {
   const expenses = [
@@ -26,11 +26,8 @@ export default function App() {
   return (
     <div>
       {/* eslint-disable-next-line react/no-unescaped-entities */}
-      <h2>Let's get started!</h2>
-      <ExpenseItem {...expenses[0]} />
-      <ExpenseItem {...expenses[1]} />
-      <ExpenseItem {...expenses[2]} />
-      <ExpenseItem {...expenses[3]} />
+      <h2>Let's Get Started</h2>
+      <Expenses info={expenses} />
     </div>
   );
 }
