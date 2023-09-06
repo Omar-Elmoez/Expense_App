@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Txt files
+ToDo.txt
+What I have done.txt
