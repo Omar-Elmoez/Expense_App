@@ -1,4 +1,5 @@
 import Expenses from "./components/Expenses/Expenses";
+import NewExpense from "./components/NewExpernse/NewExpense";
 
 export default function App() {
   const expenses = [
@@ -26,7 +27,7 @@ export default function App() {
   return (
     <div>
       {/* eslint-disable-next-line react/no-unescaped-entities */}
-      <h2>Let's Get Started</h2>
+      <NewExpense />
       <Expenses info={expenses} />
     </div>
   );
