@@ -24,10 +24,14 @@ export default function App() {
     },
   ];
 
+  function addExpenseHandler(expense) {
+    console.log('From App:',expense);
+  }
+
   return (
     <div>
       {/* eslint-disable-next-line react/no-unescaped-entities */}
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses info={expenses} />
     </div>
   );

@@ -1,1 +1,4 @@
-1- Adding 2 components (NewExpense, ExpenseForm)
+1-
+Passing Data from (ExpenseForm) to (App) => pass data from bottom to top
+2-
+Create ExpensesFilter component

@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import "./ExpenseForm.css";
-export default function ExpenseForm() {
+export default function ExpenseForm({onSavingData}) {
   const [enteredValues, setEnteredValues] = useState({
     title: "",
     price: "",
@@ -16,7 +17,7 @@ export default function ExpenseForm() {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(enteredValues);
+    onSavingData(enteredValues)
     setEnteredValues({
       title: "",
       price: "",
