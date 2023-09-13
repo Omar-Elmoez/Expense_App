@@ -12,10 +12,11 @@ export default function ExpensesFilter({onChangeFilter, defaultYear}) {
       <div className="expenses-filter__control">
         <label>Filter by year</label>
         <select value={defaultYear} onChange={filterChangeHandler}>
-          <option value="2022">2022</option>
-          <option value="2021">2021</option>
-          <option value="2020">2020</option>
-          <option value="2019">2019</option>
+          <option>-- All --</option>
+          <option>2022</option>
+          <option>2021</option>
+          <option>2020</option>
+          <option>2019</option>
         </select>
       </div>
     </div>

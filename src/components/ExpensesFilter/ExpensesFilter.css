@@ -18,7 +18,9 @@
 
 .expenses-filter select {
   font: inherit;
-  padding: 0.5rem 3rem;
+  padding-block: 0.5rem;
   font-weight: bold;
   border-radius: 6px;
+  text-align: center;
+  width: 200px;
 }
