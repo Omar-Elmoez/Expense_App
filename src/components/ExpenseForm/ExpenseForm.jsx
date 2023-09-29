@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import "./ExpenseForm.css";
-export default function ExpenseForm({onSavingData}) {
+export default function ExpenseForm({onSavingData, onAddExpense}) {
   const [enteredValues, setEnteredValues] = useState({
     title: "",
     price: "",
@@ -18,11 +18,12 @@ export default function ExpenseForm({onSavingData}) {
   const submitHandler = (e) => {
     e.preventDefault();
     onSavingData(enteredValues)
-    setEnteredValues({
-      title: "",
-      price: "",
-      date: "",
-    });
+    onAddExpense();
+    // setEnteredValues({
+    //   title: "",
+    //   price: "",
+    //   date: "",
+    // });
   };
 
   return (
@@ -63,6 +64,7 @@ export default function ExpenseForm({onSavingData}) {
         </div>
       </div>
       <div className="new-expense__actions">
+        <button type='button' onClick={onAddExpense}>Close</button>
         <button type="submit">Add Expense</button>
       </div>
     </form>
