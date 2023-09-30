@@ -13,6 +13,7 @@ export default function ExpensesFilter({onChangeFilter, defaultYear}) {
         <label>Filter by year</label>
         <select value={defaultYear} onChange={filterChangeHandler}>
           <option>-- All --</option>
+          <option>2023</option>
           <option>2022</option>
           <option>2021</option>
           <option>2020</option>

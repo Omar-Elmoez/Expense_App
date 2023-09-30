@@ -3,12 +3,12 @@ import { useState } from "react";
 import Card from "../Card/Card";
 import ExpenseItem from "../ExpenseItem/ExpenseItem";
 import ExpensesFilter from "../ExpensesFilter/ExpensesFilter";
+import ExpenseChart from "../ExpenseChart/ExpenseChart";
 import "./Expenses.css";
 
 export default function Expenses({ items }) {
   const [selectedYear, setSelectedYear] = useState();
   const [showFilteredItems, setShowFilteredItems] = useState(false);
-  
   const filteredItems = items.filter(
     (item) => new Date(item.date).getFullYear() === +selectedYear
   );
@@ -24,6 +24,7 @@ export default function Expenses({ items }) {
 
   return (
     <Card className="expenses">
+      <ExpenseChart expenses={filteredItems} />
       <ExpensesFilter
         defaultYear={selectedYear}
         onChangeFilter={selectedYearHandler}
